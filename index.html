@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/195d683cfe.js" crossorigin="anonymous"></script>
+
+  <title>Frontend Mentor | [Chat app CSS illustration challenge on Frontend Mentor]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      font-size: 16px;
+      background: #fafafa;
+    }
+
+    .fs-12 {
+      font-size: 12px;
+    }
+
+    .text-gradient {
+      font-size: 12px;
+      color: white;
+      font-weight: 700;
+    }
+
+    .cel {
+      height: 27em;
+      width: 13em;
+      border: solid white;
+      border-radius: 30px;
+      border-width: 10px;
+      box-shadow: 10px 10px 10px 15px #00000005;
+    }
+
+    .bg-cel {
+      background: #f5f3f8;
+    }
+
+    .bg-left {
+      background: #af3efe;
+      border-radius: 0 0 277px 287px;
+      margin-left: -80px;
+
+    }
+
+    .bg-right {
+      background: #f9f4fa;
+      border-radius: 265px 0px 0px;
+      right: 0;
+      height: 570px;
+      top: 80px;
+      width: 335px;
+      z-index: -1;
+    }
+
+    .top-cel {
+      background: linear-gradient(90deg, rgba(142, 58, 255, 1) 0%, rgba(229, 67, 255, 1) 70%);
+      border-width: 12px;
+      border-radius: 16px 16px 5px 5px;
+      margin: -1px;
+      height: 55px;
+    }
+
+    .top-cel-name {
+      font-weight: 600;
+      font-size: 9px;
+      color: white;
+    }
+
+    .top-cel-status {
+      color: #ffffff6b;
+      font-size: 6px;
+    }
+
+    .lh-11 {
+      line-height: 11px;
+    }
+
+    .top-cel::after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      right: 0;
+      left: 22%;
+      border-bottom: solid 23px;
+      color: white;
+      width: 56%;
+      border-radius: 30px;
+    }
+
+    .avatar {
+      width: 43%;
+      border-radius: 100%;
+      border: 1px solid white;
+    }
+
+    .arrow-top {
+      font-size: 9px;
+      color: white;
+    }
+
+    .dots {
+      font-size: 6px;
+      text-align: end;
+      align-self: center;
+    }
+
+    .cel-msg-left {
+      font-size: 6px;
+      background: #ede5f5;
+      border-radius: 8px 8px 8px 2px;
+      color: #a281b7;
+    }
+
+    .cel-msg-left-gradient {
+      font-size: 6px;
+      background: linear-gradient(90deg, rgba(229, 67, 255, 1) 0%, rgba(142, 58, 255, 1) 70%);
+      border-radius: 8px 8px 8px 2px;
+      color: #ffffff7d;
+    }
+
+    .cel-msg-right {
+      font-size: 6px;
+      background: #ffffff;
+      border-radius: 8px 8px 2px 8px;
+      color: #94909a;
+    }
+
+    .cel-msg-right-small {
+      font-size: 6px;
+      background: #ffffff;
+      border-radius: 8px 8px 2px 8px;
+      color: #94909a;
+      margin-left: 42px;
+    }
+
+    .img-cel-border {
+      border-radius: 10px;
+    }
+
+    .ml--1 {
+      margin-left: -10px;
+    }
+
+    .margin-cel {
+      margin-left: -65px;
+      margin-top: 135px;
+      margin-bottom: 30px;
+    }
+
+    .circle-msg::before {
+      content: "";
+      position: absolute;
+      border-radius: 100%;
+      width: 10px;
+      height: 10px;
+      left: 7px;
+      top: 7px;
+      border: 2px solid #ffffff38;
+    }
+
+    .typemsg {
+      border: 1px solid transparent;
+      border-radius: 30px;
+      font-size: 8px;
+      background: white;
+      color: #00000040;
+
+    }
+
+    .arrowmsg {
+      font-size: 21px;
+      color: #3d244e;
+    }
+
+    .main-title {
+      font-size: 33px;
+      color: #412a5a;
+      font-weight: 600;
+    }
+
+    .main-text {
+      color: #00000052;
+      font-weight: 500;
+      line-height: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .bg-left {
+        margin: -15%;
+      }
+
+      .margin-cel {
+        margin-top: 10%;
+        margin-left: 0%;
+        margin-bottom: -15%;
+      }
+
+      .margin-text {
+        margin-left: 15%;
+      }
+
+      .bg-right {
+        height: 406px;
+        top: 73%;
+      }
+    }
+    @media (max-width: 576px) {
+      .bg-left {
+        margin: -20%;
+      }     
+    }
+    @media (max-width: 430px) {
+      .bg-left {
+        margin: -22%;
+      }     
+    }
+    @media (max-width: 380px) {
+      .bg-left {
+        margin-left: -15%;
+      }
+      .margin-cel {
+        margin-left: -10%;
+      }     
+    }
+    @media (max-width: 380px) {
+
+      .margin-cel {
+        margin-left: -15%;
+      }     
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-8 bg-left"></div>
+          <div class="col-4 position-relative margin-cel">
+            <div class="bg-cel cel">
+              <div class="top-cel position-relative">
+                <div class="row">
+                  <div class="col-4 pt-2 d-flex align-items-center">
+                    <i class="fas fa-chevron-left px-2 arrow-top"></i>
+                    <img src="images/avatar.jpg" class="avatar" alt="Avatar">
+                  </div>
+                  <div class="col-5 pt-2 px-0 ml--1">
+                    <p class="lh-11 pt-3">
+                      <span class="top-cel-name">Samuel Green</span>
+                      <span class="d-block top-cel-status"> Available to Walk</span>
+                    </p>
+                  </div>
+                  <div class="col-3 dots pe-3 pt-2">
+                    <i class="fas fa-ellipsis-v text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <p>
+              <div class="row">
+                <div class="col-8 ps-4">
+                  <p class="cel-msg-left p-1 ps-2 mb-2">
+                    That sounds great. I’d be happy with that.
+                  </p>
+                  <p class="cel-msg-left p-1 ps-2">
+                    Could you send over some pictures of your dog, please?
+                  </p>
+                </div>
+                <div class="col-8 offset-4 pe-4">
+                  <div class="row pe-2">
+                    <div class="col-4 p-1">
+                      <img src="/images/dog-image-1.jpg" class="img-fluid img-cel-border" alt="">
+                    </div>
+                    <div class="col-4 p-1">
+                      <img src="/images/dog-image-2.jpg" class="img-fluid img-cel-border" alt="">
+                    </div>
+                    <div class="col-4 p-1">
+                      <img src="/images/dog-image-3.jpg" class="img-fluid img-cel-border" alt="">
+                    </div>
+                  </div>
+                  <p class="cel-msg-right p-1 ps-2 mb-2 mt-1">
+                    Here are a few pictures. She’s a happy girl!
+                  </p>
+                  <p class="cel-msg-right-small p-1 ps-2 mb-2 pe-0">
+                    Can you make it?
+                  </p>
+                </div>
+                <div class="col-8 ps-4">
+                  <p class="cel-msg-left p-1 ps-2 mb-2">
+                    She looks so happy! The time we discussed works. How long shall I take her out for?
+                  </p>
+                </div>
+                <div class="col-9 ps-4">
+                  <p
+                    class="ps-4 mb-2 p-1 cel-msg-left-gradient position-relative circle-msg d-flex align-items-center justify-content-between">
+                    30 minute walk<span class="text-gradient pe-2">$29</span>
+                  </p>
+                </div>
+                <div class="col-9 ps-4">
+                  <p
+                    class="ps-4 p-1 cel-msg-left-gradient position-relative circle-msg d-flex align-items-center justify-content-between">
+                    1 hour walk<span class="text-gradient pe-2">$49</span>
+                  </p>
+                </div>
+                <div class="col-12 ps-4 me-3">
+                  <div class="typemsg me-2">
+                    <p class="mb-0 p-1 ps-3 d-flex justify-content-between align-items-end">
+                      Type a message... <i class="fas fa-chevron-circle-right arrowmsg"></i>
+
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+      <div class="col-md-6 ps-0 d-flex text-center text-md-start">
+        <div class="row mt-5">
+          <div class="col-md-8 d-flex flex-column justify-content-center px-5 px-md-0 mt-5">
+            <h1 class="main-title mt-5">Simple booking</h1>
+            <p class="main-text mb-0 mt-3">
+              Stay in touch with our dog walkers through the chat interface. This makes it easy to
+              discuss arrangements and make bookings. Once the walk has been completed you can rate
+              your walker and book again all through the chat.
+            </p>
+          </div>
+          <div class="col-md-4 bg-right position-absolute"></div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <div class="attribution mt-5 mx-3">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Felipe Koerbel dos Anjos</a>.
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+    <img src="/Frontend Mentor_[Chat appCSSillustrationChallengeOnFrontendMentor].png" alt="">
+</body>
+
+</html>
