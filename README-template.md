@@ -14,8 +14,6 @@ This is a solution to the [Chat app CSS illustration challenge on Frontend Mento
 - [Author](#author)
 
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -32,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](http://challengechatappcss.epizy.com/)
-- Live Site URL: [Add live site URL here](http://challengechatappcss.epizy.com/)
+- Solution URL: https://github.com/fekoerbel/Chat-app-CSS-illustration-challenge-on-Frontend-Mentor/
+- Live Site URL: https://fekoerbel.github.io/Chat-app-CSS-illustration-challenge-on-Frontend-Mentor/
 
 ## My process
 
