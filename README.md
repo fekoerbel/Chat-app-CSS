@@ -48,3 +48,4 @@ It was very challenging to create this project. Mainly the part of creating the 
 ## Author
 
 - Frontend Mentor - [@fekoerbel](https://www.frontendmentor.io/profile/fekoerbel)
+- E-mail - fekoerbel@hotmail.com
